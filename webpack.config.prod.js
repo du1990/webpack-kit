@@ -1,6 +1,6 @@
-let webpack = require('webpack');
-let baseConfig = require('./webpack.config.base.js');
-let config = Object.create(baseConfig);
+var webpack = require('webpack');
+var baseConfig = require('./webpack.config.base.js');
+var config = Object.create(baseConfig);
 
 // 生产环境
 config.entry = './src/app/Main.js'; // 生产环境只保留文件入口

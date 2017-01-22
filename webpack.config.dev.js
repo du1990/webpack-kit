@@ -1,6 +1,6 @@
-let webpack = require('webpack');
-let baseConfig = require('./webpack.config.base.js');
-let config = Object.create(baseConfig);
+var webpack = require('webpack');
+var baseConfig = require('./webpack.config.base.js');
+var config = Object.create(baseConfig);
 
 // 为开发环境优化
 config.plugins = config.plugins.concat(

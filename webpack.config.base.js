@@ -7,9 +7,7 @@ var cssModule = 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[h
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://localhost:8088/',
-    'webpack/hot/dev-server',
-    './src/app/Main.js'
+    './src/app/Main.jsx'
   ],
   output: {
     path: path.resolve(__dirname, 'bin'),
@@ -20,7 +18,7 @@ module.exports = {
       {
         test: /\.js[x]?$/,
         exclude: /node_modudles/,
-        loaders: ['babel-loader']
+        loaders: ['babel-loader', 'eslint-loader']
       },
       {
         test: /\.css$/,
@@ -70,6 +68,12 @@ module.exports = {
         loader: "url?limit=10000&mimetype=image/svg+xml&name=[name]-[hash].[ext]"
       }
     ]
+  },
+  eslint: {
+    configFile: './.eslintrc'
+  },
+  reslove: {
+    extensions: ['', '.js', '.json', '.scss', '.css', 'jsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
