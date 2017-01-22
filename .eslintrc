@@ -1,0 +1,12 @@
+{
+  parser: "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "no-unused-vars": 0,
+    "max-len": [1, 120, 2, {ignoreComments: true}],
+    "prop-types": [0],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true, "peerDependencies": true}],
+    "react/no-array-index-key":[0],
+    "react/prop-types" : [0]
+  }
+}
