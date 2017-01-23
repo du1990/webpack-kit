@@ -7,6 +7,9 @@
     "prop-types": [0],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true, "peerDependencies": true}],
     "react/no-array-index-key":[0],
-    "react/prop-types" : [0]
+    "react/prop-types" : [0],
+    "react/prefer-stateless-function" : [1],
+    "arrow-body-style" : [0],
+    "extensions" : [0],
   }
 }

@@ -72,9 +72,6 @@ module.exports = {
   eslint: {
     configFile: './.eslintrc'
   },
-  reslove: {
-    extensions: ['', '.js', '.jsx']
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html'

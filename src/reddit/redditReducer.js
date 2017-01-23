@@ -1,11 +1,11 @@
 import {
   SELECT_REDDIT,
   RECEIVE_POSTS,
-  REQUEST_POSTS
+  REQUEST_POSTS,
 } from './RedditActions';
 
 export function selectedReddit(state = 'reactjs', action) {
-  switch(action.type) {
+  switch (action.type) {
     case SELECT_REDDIT:
       return action.reddit;
     default:
@@ -17,23 +17,23 @@ export function selectedReddit(state = 'reactjs', action) {
 // 重新覆盖状态函数
 function posts(state = {
   isFetching: false,
-  items: []
+  items: [],
 }, action) {
-  switch(action.type) {
+  switch (action.type) {
     // 覆盖请求状态
     case REQUEST_POSTS:
       return {
         ...state,
-        isFetching: true
-      }
+        isFetching: true,
+      };
     // 覆盖请求状态和请求数据
     case RECEIVE_POSTS:
       return {
         ...state,
         isFetching: false,
         items: action.posts,
-        lastUpdated: action.receivedAt
-      }
+        lastUpdated: action.receivedAt,
+      };
     default:
       return state;
   }
@@ -50,7 +50,7 @@ export function postsByReddit(state = {}, action) {
     case RECEIVE_POSTS:
       return {
         ...state,
-        [action.reddit]: posts(state[action.reddit], action)
+        [action.reddit]: posts(state[action.reddit], action),
       };
     default:
       return state;
