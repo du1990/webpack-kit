@@ -73,7 +73,7 @@ module.exports = {
     configFile: './.eslintrc'
   },
   reslove: {
-    extensions: ['', '.js', '.json', '.scss', '.css', 'jsx']
+    extensions: ['', '.js', '.jsx']
   },
   plugins: [
     new HtmlWebpackPlugin({

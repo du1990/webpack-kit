@@ -2,7 +2,7 @@ const rootRoute = {
   childRoutes: [
     {
       path: '/',
-      component: require('../app/App'),
+      component: require('../app/App.jsx'),
       childRoutes: [
         {
           path: 'reddit',
